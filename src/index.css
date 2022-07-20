@@ -88,7 +88,7 @@ button:active {
 }
 
 .invalid input {
-  border: 1px solid #b40e0e;
+  border: 1px solid #740eb4;
   background-color: #fddddd;
 }
 
