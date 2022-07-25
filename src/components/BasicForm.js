@@ -1,4 +1,13 @@
+import useInput from "../hooks/use-input";
+
+const isNotEmpty = (value) => value.trim() !== "";
+const isEmail = (value) => value.includes("@");
+
 const BasicForm = (props) => {
+  useInput(isNotEmpty);
+  useInput(isNotEmpty);
+  useInput(isEmail);
+
   return (
     <form>
       <div className="control-group">
