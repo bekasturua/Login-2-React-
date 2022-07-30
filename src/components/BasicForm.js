@@ -8,7 +8,7 @@ const BasicForm = (props) => {
     value: firstNameValue,
     isValid: firstNameIsValid,
     hasError: firstNameHasError,
-    valueChangeHandler: firstNameCHangeHandler,
+    valueChangeHandler: firstNameChangeHandler,
     inputBlurHandler: firstNameBlurHandler,
     reset: resetFirstName,
   } = useInput(isNotEmpty);
@@ -16,7 +16,7 @@ const BasicForm = (props) => {
     value: lastNameValue,
     isValid: lastNameIsValid,
     hasError: lastNameHasError,
-    valueChangeHandler: lastNameCHangeHandler,
+    valueChangeHandler: lastNameChangeHandler,
     inputBlurHandler: lastNameBlurHandler,
     reset: resetLastName,
   } = useInput(isNotEmpty);
@@ -24,7 +24,7 @@ const BasicForm = (props) => {
     value: emailValue,
     isValid: emailIsValid,
     hasError: emailHasError,
-    valueChangeHandler: emailCHangeHandler,
+    valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmail,
   } = useInput(isEmail);
@@ -67,11 +67,11 @@ const BasicForm = (props) => {
             type="text"
             id="name"
             value={firstNameValue}
-            onChange={firstNameCHangeHandler}
+            onChange={firstNameChangeHandler}
             onBlur={firstNameBlurHandler}
           />
           {firstNameHasError && (
-            <p className="error-text">Please enter ad first name.</p>
+            <p className="error-text">Please enter a first name.</p>
           )}
         </div>
         <div className={lastNameClasses}>
@@ -80,11 +80,11 @@ const BasicForm = (props) => {
             type="text"
             id="name"
             value={lastNameValue}
-            onChange={lastNameCHangeHandler}
+            onChange={lastNameChangeHandler}
             onBlur={lastNameBlurHandler}
           />
           {lastNameHasError && (
-            <p className="error-text">Please enter ad last name.</p>
+            <p className="error-text">Please enter a last name.</p>
           )}
         </div>
       </div>
@@ -94,11 +94,11 @@ const BasicForm = (props) => {
           type="text"
           id="name"
           value={emailValue}
-          onChange={emailCHangeHandler}
+          onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
         />
         {emailHasError && (
-          <p className="error-text">Please enter ad email address.</p>
+          <p className="error-text">Please enter a valid email address.</p>
         )}
       </div>
       <div className="form-actions">

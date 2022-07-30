@@ -1,12 +1,12 @@
 import { useReducer } from "react";
-import { act } from "react-dom/test-utils";
 
 const initialInputState = {
   value: "",
   isTouched: false,
 };
+
 const inputStateReducer = (state, action) => {
-  if (action.type === "input") {
+  if (action.type === "INPUT") {
     return { value: action.value, isTouched: state.isTouched };
   }
   if (action.type === "BLUR") {
@@ -15,7 +15,7 @@ const inputStateReducer = (state, action) => {
   if (action.type === "RESET") {
     return { isTouched: false, value: "" };
   }
-  return initialInputState;
+  return inputStateReducer;
 };
 
 const useInput = (validateValue) => {
